@@ -1,0 +1,57 @@
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+
+function calculateAspectRatio() {
+    const images = document.querySelectorAll('.gallery-img img');
+    const aspectRatio = images[0].naturalHeight / images[0].naturalWidth;
+  
+    images.forEach(img => {
+      img.parentElement.style.paddingBottom = containerHeight;
+    });
+}
+  
+  window.onload = calculateAspectRatio;
+
+// Accordion
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionItems = document.querySelectorAll(".acc-item");
+
+  accordionItems.forEach((item) => {
+    const title = item.querySelector(".acc-item h3");
+    const content = item.querySelector(".acc-item p");
+    const chevron = item.querySelector(".acc-chevron");
+
+    title.addEventListener("click", () => {
+      const isExpanded = content.style.display === "block";
+
+      // Close all accordion items
+      accordionItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.querySelector(".acc-item p").style.display = "none";
+          otherItem.querySelector(".acc-chevron").style.transform =
+            "rotate(0deg)";
+        }
+      });
+
+      // Toggle the clicked accordion item
+      content.style.display = isExpanded ? "none" : "block";
+      chevron.style.transform = isExpanded ? "rotate(0deg)" : "rotate(180deg)";
+    });
+  });
+});
+  
