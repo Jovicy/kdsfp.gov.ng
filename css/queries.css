@@ -26,4 +26,53 @@
         display: block;
         cursor: pointer;
     }
+
+    /* Home section */
+    .hero {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .hero-briefing {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 100%;
+    }
+
+    .hero-briefing h1 {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .hero-briefing p {
+        left: 0;
+    }
+
+    .goals {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-sub-navlist {
+        flex-direction: column;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+    }
+
+    .footer-social {
+        flex-direction: column;
+    }
 }
