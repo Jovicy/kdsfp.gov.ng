@@ -22,6 +22,10 @@
         margin: 2.5rem 0;
     }
 
+    .nav-logo {
+        font-size: 15px;
+    }
+
     .hamburger {
         display: block;
         cursor: pointer;
@@ -52,20 +56,89 @@
         left: 0;
     }
 
+    /* Goals Section */
     .goals {
         flex-direction: column;
     }
 
+    .goals-img {
+        width: 100%;
+    }
+
+    .goals-content {
+        width: 100%;
+    }
+
+    /* About section */
     .about {
         flex-direction: column;
     }
 
+    .about-content {
+        width: 100%;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    /* Acoordion  */
+    .acc-item h3 span {
+        font-size: 12px;
+    }
+
+    /* About Page */
+    .about-us-content-img {
+        width: 100%;
+    }
+
+    /* Research Page */
+    .content-main {
+        width: 100%;
+    }
+
+    /* Application Page */
+    .application {
+        flex-direction: column;
+    }
+
+    .application-img {
+        width: 100%;
+    }
+
+    .application-form {
+        width: 100%;
+    }
+
+    /* Support */
+    .support {
+        flex-direction: column;
+    }
+    .support-briefing {
+        width: 100%;
+    }
+
+    .support-title h1{
+        font-size: 1.5rem;
+    }
+
+    .support-image {
+        width: 100%;
+    }
+
+    /* Footer section */
     .footer-nav {
         flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-link {
+        gap: 5px;
     }
 
     .footer-sub-navlist {
         flex-direction: column;
+        align-items: start;
     }
 
     .footer-menu {
@@ -74,5 +147,6 @@
 
     .footer-social {
         flex-direction: column;
+        align-items: start;
     }
 }
