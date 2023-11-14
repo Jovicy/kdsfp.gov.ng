@@ -1,21 +1,39 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+// const hamburger = document.querySelector(".hamburger");
+// const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", mobileMenu);
+// hamburger.addEventListener("click", mobileMenu);
 
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
-const navLink = document.querySelectorAll(".nav-link");
+// function mobileMenu() {
+//   hamburger.classList.toggle("active");
+//   navMenu.classList.toggle("active");
+// }
+// const navLink = document.querySelectorAll(".nav-link");
 
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+// navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
-function closeMenu() {
-  hamburger.classList.remove("active");
-  navMenu.classList.remove("active");
-}
+// function closeMenu() {
+//   hamburger.classList.remove("active");
+//   navMenu.classList.remove("active");
+// }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const overlay = document.querySelector('.overlay');
+
+  hamburger.addEventListener('click', function () {
+      navMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+  });
+
+  overlay.addEventListener('click', function () {
+      navMenu.classList.remove('active');
+      overlay.classList.remove('active');
+  });
+});
+
+
+// Gallery
 function calculateAspectRatio() {
     const images = document.querySelectorAll('.gallery-img img');
     const aspectRatio = images[0].naturalHeight / images[0].naturalWidth;
@@ -25,7 +43,7 @@ function calculateAspectRatio() {
     });
 }
   
-  window.onload = calculateAspectRatio;
+window.onload = calculateAspectRatio;
 
 // Accordion
 document.addEventListener("DOMContentLoaded", function () {
