@@ -677,6 +677,7 @@ form {
 /* footer */
 .footer-section {
     background-image: url(../img/footer-bg.png);
+    background-size: cover;
     background-color: var(--sub);
     padding: 6rem 0;
     background-repeat: no-repeat;
